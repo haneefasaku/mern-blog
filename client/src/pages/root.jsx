@@ -1,4 +1,5 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 
 function Root() {
   return (
@@ -6,6 +7,7 @@ function Root() {
         <header>
             <h1>Logo</h1>
         </header>
+        <Outlet/>
         <footer></footer>
     </>
   )

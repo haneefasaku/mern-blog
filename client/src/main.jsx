@@ -7,6 +7,12 @@ import {
 import './index.css'
 import Root from './pages/root';
 import ErrorPage from './pages/error-page';
+import Home from './pages/Home';
+import About from './pages/About';
+import Signin from './pages/Signin';
+import Signup from './pages/Signup';
+import Dashbord from './pages/Dashbord';
+import Projects from './pages/Projects';
 
 
 const router = createBrowserRouter([
@@ -16,7 +22,28 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>,
     children:[
       {
-        
+        path:"/",
+        element: <Home/>,
+      },
+      {
+        path:"/about",
+        element: <About/>
+      },
+      {
+        path:"/signin",
+        element: <Signin/>
+      },
+      {
+        path:"/signup",
+        element: <Signup/>
+      },
+      {
+        path:"/dashbord",
+        element: <Dashbord/>
+      },
+      {
+        path:"/projects",
+        element: <Projects/>
       }
     ]
   },
