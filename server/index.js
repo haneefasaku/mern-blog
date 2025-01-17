@@ -9,7 +9,7 @@ const port = 3000
 app.use(express.json())
 connectDb();
 app.use('/user', userRoutes)
-app.use('/auth',authRoutes)
+app.use('/api/auth',authRoutes)
 
 
 
