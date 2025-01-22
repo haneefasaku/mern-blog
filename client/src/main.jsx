@@ -9,10 +9,12 @@ import Root from './pages/root';
 import ErrorPage from './pages/error-page';
 import Home from './pages/Home';
 import About from './pages/About';
-import Signin from './pages/Signin';
 import Signup from './pages/Signup';
 import Dashbord from './pages/Dashbord';
 import Projects from './pages/Projects';
+import store from './redux/store'
+import { Provider } from 'react-redux'
+import Signin from './pages/Signin';
 
 
 const router = createBrowserRouter([
@@ -53,6 +55,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <Provider store={store}>
     <RouterProvider router={router} />
+    </Provider>
   </StrictMode>,
 )
