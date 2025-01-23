@@ -12,9 +12,10 @@ import About from './pages/About';
 import Signup from './pages/Signup';
 import Dashbord from './pages/Dashbord';
 import Projects from './pages/Projects';
-import store from './redux/store'
+import {store, persistor} from './redux/store'
 import { Provider } from 'react-redux'
 import Signin from './pages/Signin';
+import { PersistGate } from 'redux-persist/integration/react';
 
 
 const router = createBrowserRouter([
@@ -55,8 +56,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+  <PersistGate persistor={persistor}>
     <Provider store={store}>
     <RouterProvider router={router} />
     </Provider>
+  </PersistGate>
   </StrictMode>,
 )
